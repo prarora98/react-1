@@ -4,30 +4,35 @@ button {
   border: 0;
   background-color: transparent;
   color: white;
+  font-size: 14px;
   font-weight: 900;
 }
 .small {
-  padding: 5px 18px;
+  padding: 15px 45px;
 }
 .medium {
-  padding: 15px 55px;
+  padding: 15px 75px;
 }
 .large {
-  padding: 7px 45px;
+  padding: 15px 110px;
 }
 .light {
   background-color: #9b9b9b;
 }
 .dark {
-  background-color: #193384;
+  background-color: #193586;
+}
+.light-color {
+  color: #9b9b9b;
+}
+.dark-color {
+  color: #193384;
 }
 .primary {
-  border: 2px solid #193384;
+  color: #193384;
+  border: 2px solid #193586;
 }
 .secondary {
   color: #9b9b9b;
   border: 2px solid #9b9b9b;
-}
-.tertiary {
-  border: 0;
 }
