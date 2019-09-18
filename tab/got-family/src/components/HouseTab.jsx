@@ -8,12 +8,13 @@ class HouseTab extends Component {
   render() {
     const houses = this.props.houses;
     if (!houses) return "";
-    console.log(houses);
-    return houses.map(house => (
-      <li>
-        <a>{house.name}</a>
-      </li>
-    ));
+    return (
+      <ul>
+        {houses.map((house, i) => (
+          <li key={i}>{house.name}</li>
+        ))}
+      </ul>
+    );
   }
 }
 
