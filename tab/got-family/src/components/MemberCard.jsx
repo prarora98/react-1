@@ -4,26 +4,24 @@ import "../stylesheets/MemberCard.css";
 class MemberCard extends React.Component {
   constructor(props) {
     super();
-    console.log(props);
   }
   render() {
-    const { family } = this.props;
-    console.log(family);
+    const { people } = this.props.family;
     return (
-      <div className="card">
-        <div className="card-content">
-          <div className="media">
-            <div className="media-left"></div>
-            <div className="media-content"></div>
+      <div className="container">
+        {people.map(member => (
+          <div className="card" key={member.name}>
+            <div className="card-content">
+              <div className="media">
+                <div className="media-left">
+                  <img src={member.image} alt={member.name} />
+                </div>
+                <div className="media-content">{member.name}</div>
+              </div>
+              <div className="content">{member.description}</div>
+            </div>
           </div>
-          <div className="content">
-            <ul>
-              {this.props.family.people.map(o => (
-                <li>{o.name}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
+        ))}
       </div>
     );
   }

@@ -3,6 +3,7 @@ ul {
   list-style: none;
   display: flex;
   justify-content: center;
+  overflow-y: auto;
 }
 li {
   border: 1px solid #dbdbdb;
@@ -21,4 +22,13 @@ li:first-child {
 li:last-child {
   border-top-right-radius: 45%;
   border-bottom-right-radius: 45%;
+}
+.isActive {
+  background-color: #3273dc;
+  border-color: #3273dc;
+  color: white;
+}
+.isActive:hover {
+  background-color: #3273dc;
+  border-color: #3273dc;
 }

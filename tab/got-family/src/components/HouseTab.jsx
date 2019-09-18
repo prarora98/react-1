@@ -10,7 +10,6 @@ class HouseTab extends Component {
     };
   }
   card = i => {
-    const { houses } = this.props;
     this.setState({ activeIndex: i });
   };
   render() {
@@ -21,6 +20,7 @@ class HouseTab extends Component {
         <ul>
           {houses.map((house, i) => (
             <li
+              className={this.state.activeIndex === i ? "isActive" : ""}
               onClick={() => {
                 this.card(i);
               }}
