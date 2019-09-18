@@ -1,13 +1,24 @@
 import React from "react";
-import Header from "./components/Header";
+import HouseTab from "./components/HouseTab";
 import MemberCard from "./components/MemberCard";
 import "./App.css";
 
-export default function() {
-  return (
-    <React.Fragment>
-      <Header />
-      <MemberCard />
-    </React.Fragment>
-  );
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {};
+  }
+  componentDidMount() {
+    fetch(
+      "https://raw.githubusercontent.com/nnnkit/json-data-collections/master/got-houses.json"
+    )
+      .then(response => response.json())
+      .then(data => this.setState({ houses: data.houses }))
+      .catch(err => console.log(err));
+  }
+  render() {
+    return <HouseTab houses={this.state.houses} />;
+  }
 }
+
+export default App;

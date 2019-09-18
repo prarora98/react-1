@@ -1,4 +1,5 @@
 import React from "react";
+import "../stylesheets/MemberCard.css";
 
 class MemberCard extends React.Component {
   render() {
