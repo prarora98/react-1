@@ -1,6 +1,5 @@
 import React from "react";
 import HouseTab from "./components/HouseTab";
-import MemberCard from "./components/MemberCard";
 import "./App.css";
 
 class App extends React.Component {
@@ -17,7 +16,11 @@ class App extends React.Component {
       .catch(err => console.log(err));
   }
   render() {
-    return <HouseTab houses={this.state.houses} />;
+    return (
+      <>
+        <HouseTab houses={this.state.houses} />
+      </>
+    );
   }
 }
 
