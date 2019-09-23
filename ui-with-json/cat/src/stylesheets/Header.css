@@ -1,0 +1,9 @@
+header {
+  margin: 1.8rem;
+  color: #f2857b;
+}
+div {
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-weight: 600;
+}
